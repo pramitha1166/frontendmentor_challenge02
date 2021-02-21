@@ -1,0 +1,87 @@
+.hero-section {
+    margin-top: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    .hero-image-mobile {
+        display: none;
+        img {
+            width: 300px;
+            height: auto
+        }
+    }
+    .hero-content {
+        width: 50%;
+        .heading {
+            h3 {
+                @include heading();
+            }
+        }
+        p {
+            @include para();
+            margin-top: 20px;
+        }
+        .action {
+            margin-top: 20px;
+            input {
+                padding: 5px 10px;
+                font-size: 10px;
+                height: 15px;
+                width: 150px;
+                border: 0.9px solid $lightGray;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            button {
+                background-color: $brightBlue;
+                padding: 8px 30px;
+                margin: 0;
+                border: none;
+                font-size: 10px;
+                color: white;
+            }
+        }
+    };
+    .hero-image {
+        @include centerItems();
+        width: 50%;
+        img {
+            width: 80%;
+            height: auto;
+        }
+    };
+    @include phone {
+        .hero-image-mobile {
+            @include centerItems();
+            margin-bottom: 60px;
+        }
+        .hero-image {
+            display: none;
+        }
+        .hero-content {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            .action {
+                text-align: center;
+                input {
+                    position: relative;
+                    width: 90%;
+                    margin: 10px 0px;
+                }
+                button {
+                    position: relative;
+                    width: 96%;
+                }
+            }
+        }
+    };
+
+}
+
+@include phone {
+    .hero-section {
+        display: block;
+    }
+}
+

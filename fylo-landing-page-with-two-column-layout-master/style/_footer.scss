@@ -1,0 +1,70 @@
+footer {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: $veryDarkBlue;
+    .footer-area {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 60px 30px;
+
+        .item_01 {
+            img {
+                width: 100px;
+                height: auto;
+            }
+            .phone {
+                margin-top: 10px;
+                font-size: 12px;
+                p {
+                  span img {
+                      width: 10px;
+                      height: auto;
+                      margin-right: 10px;
+                  }
+                }
+                
+            }
+            .email {
+                margin-top: 10px;
+                font-size: 12px;
+                p {
+                    span img {
+                        width: 10px;
+                        height: auto;
+                        margin-right: 10px;
+                    }
+                  }
+            }
+            @include phone {
+                margin-bottom: 30px;
+            }
+        }
+
+        ul {
+            margin-top: 60px;
+            @include phone {
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+        }
+
+        li {
+            margin-top: 10px;
+            @include para();
+            color: rgb(231, 231, 231);
+        }
+
+        @include phone {
+            display: block;
+        }
+        .item_04 {
+            margin-top: 60px;
+            img {
+                width: 20px;
+                height: auto;
+                margin-right: 10px;
+            }
+        }
+    }
+}

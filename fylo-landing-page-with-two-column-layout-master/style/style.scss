@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import "./colors";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin phone {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+@mixin para {
+    font-family: 'Open Sans', sans-serif;
+    color: $desaturatedBlue;
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+
+@mixin  heading {
+    font-size: 20px;
+    color: $veryDarkBlue;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+@mixin centerItems() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@import "./header";
+@import "./herosection";
+@import "./bodysection";
+@import "./contact";
+@import "./footer";
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.noListStyle {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main.container {
+    margin: 10px 0px 0px 0px;
+}
+
+
